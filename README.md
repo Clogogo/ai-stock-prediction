@@ -7,7 +7,6 @@ A simple web application that lets you enter up to 3 stock tickers, fetches rece
 - Add up to 3 stock tickers
 - Fetch 3-day aggregated price data from Polygon.io
 - Generate a styled 150-word summary and recommendation using Gemini AI (`gemini-2.0-flash` model)
-- Minimal, responsive UI with optional Bootstrap styling
 
 ## Tech Stack
 
@@ -20,7 +19,9 @@ A simple web application that lets you enter up to 3 stock tickers, fetches rece
 ## Setup & Installation
 
 1. **Clone the repository**
-
+ `https://github.com/Clogogo/Ai-stock-prediction.git`
+ `cd Ai-stock-prediction`
+ 
 
 
 2. **Install dependencies**
