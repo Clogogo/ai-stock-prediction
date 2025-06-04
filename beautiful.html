@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stock Prediction</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #343a40;
+    }
+    .hero {
+      background: url('images/loader.svg') no-repeat center center / cover;
+      padding: 120px 0;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+    }
+    .hero h1 {
+      font-family: 'Comic Neue', cursive;
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .hero p.lead {
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
+    .card-predict {
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #343a40;
+      color: #adb5bd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Stock Prediction</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Predict Your Stocks with Style</h1>
+      <p class="lead">Up to 3 tickers, supercharged insights, and a dash of humour.</p>
+      <a href="#predict" class="btn btn-light btn-lg mt-3"><i class="bi bi-rocket-fill"></i> Get Started</a>
+    </div>
+  </section>
+
+  <!-- Prediction Form -->
+  <section id="predict" class="container my-5">
+    <div class="card p-4 card-predict">
+      <h4 class="mb-3">Enter Stock Tickers</h4>
+      <form id="ticker-input-form" class="row g-2 align-items-center">
+        <div class="col-sm-8">
+          <input type="text" id="ticker-input" class="form-control" placeholder="e.g. AAPL">
+        </div>
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-outline-primary add-ticker-btn" aria-label="Add ticker">
+            <i class="bi bi-plus"></i>
+          </button>
+        </div>
+      </form>
+      <div class="mt-3 ticker-choice-display text-muted">Your tickers will appear here...</div>
+      <button class="btn btn-primary mt-4 generate-report-btn" type="button" disabled>
+        <i class="bi bi-file-earmark-text me-2"></i>Generate Report
+      </button>
+    </div>
+  </section>
+
+  <!-- Loading & Output -->
+  <section class="container my-4">
+    <div class="loading-panel text-center d-none">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p id="api-message" class="mt-2">Querying Stocks API...</p>
+    </div>
+    <div class="output-panel d-none">
+      <div class="card card-predict">
+        <div class="card-body">
+          <h5 class="card-title">Your Report 😜</h5>
+          <!-- Report paragraphs go here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-5 text-center">
+    <div class="container">
+      <p>&copy; 2025 Stock Prediction. Not financial advice.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
